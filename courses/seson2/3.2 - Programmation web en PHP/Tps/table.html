@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="tables.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body style="font-family: Optima">
+    <div class="container">
+      <div class="table">
+        <div class="table-wrapper">
+          <div class="table-title">
+            <div class="row">
+              <div class="col-md-6">List <b>des Notes</b></div>
+              <div class="col-md-6 float-right" style="font-size: 10px">
+                <a href="#" class="btn btn-success">
+                  <i class="fa fa-plus-circle"></i>
+                  Ajouter un Etudiant
+                </a>
+              </div>
+            </div>
+            <br />
+            <table class="table table-striped table-hover text-center">
+              <thead class="thead-dark">
+                <tr class="">
+                  <th><i class="fa fa-user"></i> Nom</th>
+                  <th><i class="fa fa-check-circle"></i>Note</th>
+                  <th>Modifier</th>
+                  <th>Supprimer</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>${etudiant.id}</td>
+                  <td>18 (/20)</td>
+                  <td>
+                    <a href="#?id=" title="modifier"
+                      ><i class="fa fa-edit" style="color: green"></i>
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#?id=${etudiant.id}" title="supprimer"
+                      ><i class="fa fa-remove" style="color: red"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+#1st way use this link:
+http://localhost:8069/web/database/selector
+
+#2nd way:
+ip-address:8069
+
+#3rd
+localhost:8069

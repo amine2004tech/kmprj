@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TP9</title>
+
+<script>
+	
+	function ajouterProvisions()
+		{
+
+			liste=document.getElementById("listeProvisions");
+			nouveauli=document.createElement("li");
+			nouveauli.appendChild(document.createTextNode("suite de la liste"));
+			liste.appendChild(nouveauli);
+		
+		}
+	function supprimerProvisions()
+			{
+				liste=document.getElementById("listeProvisions");			
+				dernier=liste.lastElementChild;
+				liste.removeChild(dernier);
+			
+				//if (liste.lastChild.nodeType==3) liste.removeChild(liste.lastChild);			
+			}
+	
+</script>
+
+</head>
+<body >
+<input type="button" value="ajouter" onclick="ajouterProvisions()">
+<input type="button" value="supprimer" onclick="supprimerProvisions()">
+<ul id="listeProvisions">
+	<li>1kg de farine</li>
+	<li>10 oeufs</li>
+	<li>1l de lait</li>
+	<li>100g de beurre</li>
+
+</body></html>

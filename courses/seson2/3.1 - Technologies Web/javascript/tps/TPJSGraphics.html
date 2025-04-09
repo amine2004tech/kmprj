@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<body>
+<div id="myChart1" style="width:100%; max-width:600px; height:500px;"></div>
+<div id="myChart2" style="width:100%; max-width:600px; height:500px;"></div>
+
+<script>
+google.charts.load('current',{packages:['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+
+var data = google.visualization.arrayToDataTable([
+  ['Diplôme', 'Taux de chômage'],
+  ['Licence fondamentale', 0.21],
+  ['Technicien spécialisé', 0.205],
+  ['Diplôme ENCG', 0.052],
+  ['Diplôme ingénieur',0.029],
+]);
+
+
+var options = {
+  title: 'Taux de chômage des diplômés Enseignement Supérieur',
+  width: 600,
+  height: 400,
+  bar: {groupWidth: "95%"},
+  vAxis:{format: 'percent'},
+  legend: { position: "none" },
+};
+
+var chart = new google.visualization.BarChart(document.getElementById('myChart1'));
+chart.draw(data, options);
+
+var chart = new google.visualization.ColumnChart(document.getElementById('myChart2'));
+chart.draw(data, options);
+
+}
+</script>
+
+</body>
+</html>

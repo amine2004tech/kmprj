@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="language" content="fr">
+    <title>TP4:Nombre aléatoire</title>
+  </head>
+  <body>
+    <p>
+      Trouver un nombre entre 1 et <span id="maxValue"></span>:
+    </p>
+    <div>
+      <form id="myForm" onsubmit="return VerifierNombre();">
+        <div>
+          <input type="text" id="valueField" size="4">
+          <input type="submit" value="Tester">
+        </div>
+      </form>
+    </div>
+    <p id="result"></p>
+    <script type="text/javascript" src="js/TP4.js"></script>
+  </body>
+</html>

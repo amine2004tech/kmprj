@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TP7</title>
+<head>
+<script>
+	
+	function change_liste()
+		{
+
+			liste=document.getElementsByTagName("ul")[0];
+			items=document.getElementsByTagName("li");
+			
+			liste.setAttribute("type", "circle");
+			
+			for (let i=0; i<items.length; i++)
+				{
+items[i].firstChild.nodeValue= items[i].firstChild.nodeValue.toUpperCase();
+items[i].setAttribute("onclick", "alert('Ceci est un exercice sur DOM')");
+				}
+		
+		}
+	
+</script>
+
+</head>
+<body onclick="change_liste()">
+
+<ul>
+	<li>a</li>
+	<li>b</li>
+	<li>c</li>
+	<li>d</li>
+	<li>e</li>
+	<li>f</li>
+	<li>g</li>
+	<li>h</li>	
+</ul>
+
+
+
+</body></html>

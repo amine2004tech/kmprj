@@ -1,0 +1,13 @@
+
+<button onclick="AvancerHist()">Avancer dans l'historique </button>
+<button onclick="ReculerHist()"> Reculer dans l'historique</button>
+<button onclick="ReculerHist2()">Reculer dans l'historique 2 pages </button>
+
+
+<button onclick="goBack()">Reculer dans l'historique: autre manière</button> 
+
+<script>
+function ReculerHist() { window.history.back();}
+function AvancerHist(){window.history.forward();}
+function ReculerHist2() {window.history.go(-2);}
+</script>

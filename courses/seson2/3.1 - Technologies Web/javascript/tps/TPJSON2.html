@@ -1,0 +1,19 @@
+	<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Charger/lire un fichier JSON avec XMLHttpRequest</h2>
+<p id="demo"></p>
+
+<script>
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() {
+  const myObj = JSON.parse(this.responseText);
+  document.getElementById("demo").innerHTML = myObj.name;
+}
+xmlhttp.open("GET", "TPJSON2.txt");
+xmlhttp.send();
+</script>
+
+</body>
+</html>

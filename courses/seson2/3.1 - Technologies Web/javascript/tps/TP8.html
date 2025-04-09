@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TP8</title>
+
+<script>
+	
+	function ajouterProvisions()
+		{
+
+			liste=document.getElementById("listeProvisions");
+			nouveauli=document.createElement("li");
+			nouveauli.appendChild(document.createTextNode("suite de la liste"));
+			liste.appendChild(nouveauli);
+		}
+	
+</script>
+
+</head>
+<body onclick="ajouterProvisions()">
+
+<ul id="listeProvisions">
+	<li>1kg de farine</li>
+	<li>10 oeufs</li>
+	<li>1l de lait</li>
+	<li>100g de beurre</li>
+
+</body></html>
