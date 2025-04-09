@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ESI Wiki - Academy</title>
+  <style>
+    
+    details li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+
+details li a {
+  display: inline-block;
+  padding: 10px 16px;
+  margin: 6px;
+  border-radius: 12px;
+  border: 2px solid #f4a261;
+  background-color: #0d1b2a;
+  color: #f4a261;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: rgba(236, 106, 0, 0.4);
+}
+
+details li a:hover {
+  background-color: #0f2e46;
+  color: #e0e1dd;
+  box-shadow: 0 0 16px #f4a261;
+  transform: translateY(-2px);
+}
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0d1b2a;
+      color: #e0e1dd;
+    }
+
+    header {
+      background: #1b263b;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #f4a261;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav ul li a:hover {
+      color: #e76f51;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #f4a261;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    details {
+      margin: 12px 0;
+      background: #1b263b;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease-in-out;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    details:hover {
+      box-shadow: 0 4px 12px rgba(244, 162, 97, 0.4);
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 15px 20px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #f4a261;
+      position: relative;
+    }
+
+    summary::marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "▶";
+      position: absolute;
+      right: 20px;
+      color: #e0e1dd;
+      transition: transform 0.3s ease;
+    }
+
+    details[open] summary::after {
+      transform: rotate(90deg);
+    }
+
+    details p {
+      padding: 0 20px 15px;
+      margin: 0;
+      color: #e0e1dd;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background: #1b263b;
+      color: #f4a261;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>WIKI ESI</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="academy.html">Academy (Explicite)</a></li>
+        <li><a href="qa.html">Q&A (Tacite)</a></li>
+        <li><a href="chat/templates/index.html">Chatbot</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section><h2>Season 1</h2>
+    <details>
+      <summary>1.1 - Architecture des ordinateurs</summary>
+      <ul>
+        <li><a href="courses/seson1/1.1 - Architecture des ordinateurs/ESI AO crs 1.pdf" download target="_blank">📄 ESI AO crs 1.pdf</a></li>
+        <li><a href="courses/seson1/1.1 - Architecture des ordinateurs/ESI AO crs 2.pdf" download target="_blank">📄 ESI AO crs 2.pdf</a></li>
+        <li><a href="courses/seson1/1.1 - Architecture des ordinateurs/ESI AO crs 3.pdf" download target="_blank">📄 ESI AO crs 3.pdf</a></li>
+        <li><a href="courses/seson1/1.1 - Architecture des ordinateurs/ESI AO crs 4.pdf" download target="_blank">📄 ESI AO crs 4.pdf</a></li>
+        <li><a href="courses/seson1/1.1 - Architecture des ordinateurs/ESI AO crs 5.pdf" download target="_blank">📄 ESI AO crs 5.pdf</a></li>
+        <li><a href="courses/seson1/1.1 - Architecture des ordinateurs/Resume.pdf" download target="_blank">📄 Resume.pdf</a></li>
+        <li><a href="courses/seson1/1.1 - Architecture des ordinateurs/ao pics.pdf" download target="_blank">📄 ao pics.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>1.2 - Système d’exploitation</summary>
+      <ul>
+        <li><a href="courses/seson1/1.2 - Système d’exploitation/1- Presentation.pdf" download target="_blank">📄 1- Presentation.pdf</a></li>
+        <li><a href="courses/seson1/1.2 - Système d’exploitation/2- Introduction.pdf" download target="_blank">📄 2- Introduction.pdf</a></li>
+        <li><a href="courses/seson1/1.2 - Système d’exploitation/3- Gestion_fichier.pdf" download target="_blank">📄 3- Gestion_fichier.pdf</a></li>
+        <li><a href="courses/seson1/1.2 - Système d’exploitation/4- Gestion_processus.pdf" download target="_blank">📄 4- Gestion_processus.pdf</a></li>
+        <li><a href="courses/seson1/1.2 - Système d’exploitation/5- Gestion_mémoire.pdf" download target="_blank">📄 5- Gestion_mémoire.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>2.1 - Algèbre matricielle</summary>
+      <ul>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>2.2 - Analyse</summary>
+      <ul>
+        <li><a href="courses/seson1/2.2 - Analyse/Cours - Mesure - Laplace (1).pdf" download target="_blank">📄 Cours - Mesure - Laplace (1).pdf</a></li>
+        <li><a href="courses/seson1/2.2 - Analyse/DOC-20231026-WA0010..pdf" download target="_blank">📄 DOC-20231026-WA0010..pdf</a></li>
+        <li><a href="courses/seson1/2.2 - Analyse/Topologie et Theorie de mesure .pdf" download target="_blank">📄 Topologie et Theorie de mesure .pdf</a></li>
+        <li><a href="courses/seson1/2.2 - Analyse/analyse 9-11.pdf" download target="_blank">📄 analyse 9-11.pdf</a></li>
+        <li><a href="courses/seson1/2.2 - Analyse/analyse_7-11-2023.pdf" download target="_blank">📄 analyse_7-11-2023.pdf</a></li>
+        <li><a href="courses/seson1/2.2 - Analyse/avancement_du_cm_2019-2020.pdf" download target="_blank">📄 avancement_du_cm_2019-2020.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>3.1 - Algorithmique</summary>
+      <ul>
+        <li><a href="courses/seson1/3.1 - Algorithmique/1. Algorithmique_Introduction.pdf" download target="_blank">📄 1. Algorithmique_Introduction.pdf</a></li>
+        <li><a href="courses/seson1/3.1 - Algorithmique/2. Algorithmique_Variables.pdf" download target="_blank">📄 2. Algorithmique_Variables.pdf</a></li>
+        <li><a href="courses/seson1/3.1 - Algorithmique/3. Algorithmique_Structures alternatives.pdf" download target="_blank">📄 3. Algorithmique_Structures alternatives.pdf</a></li>
+        <li><a href="courses/seson1/3.1 - Algorithmique/4. Algorithmique_Structures itératives.pdf" download target="_blank">📄 4. Algorithmique_Structures itératives.pdf</a></li>
+        <li><a href="courses/seson1/3.1 - Algorithmique/5. Algorithmique_Tableaux.pdf" download target="_blank">📄 5. Algorithmique_Tableaux.pdf</a></li>
+        <li><a href="courses/seson1/3.1 - Algorithmique/6. Algorithmique_Fonctions et Procédures.pdf" download target="_blank">📄 6. Algorithmique_Fonctions et Procédures.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>3.2 - Programmation Python</summary>
+      <ul>
+        <li><a href="courses/seson1/3.2 - Programmation Python/Lecture1 Introduction au langage Python.pdf" download target="_blank">📄 Lecture1 Introduction au langage Python.pdf</a></li>
+        <li><a href="courses/seson1/3.2 - Programmation Python/Lecture2 Data Types and Data Structures  [Enregistré automatiquement].pdf" download target="_blank">📄 Lecture2 Data Types and Data Structures  [Enregistré automatiquement].pdf</a></li>
+        <li><a href="courses/seson1/3.2 - Programmation Python/Lecture3 Input and output.pdf" download target="_blank">📄 Lecture3 Input and output.pdf</a></li>
+        <li><a href="courses/seson1/3.2 - Programmation Python/Lecture4 Controle de flux.pdf" download target="_blank">📄 Lecture4 Controle de flux.pdf</a></li>
+        <li><a href="courses/seson1/3.2 - Programmation Python/Lecture5 fonctions_231204_105708.pdf" download target="_blank">📄 Lecture5 fonctions_231204_105708.pdf</a></li>
+        <li><a href="courses/seson1/3.2 - Programmation Python/Lecture6 numpy[352].pdf" download target="_blank">📄 Lecture6 numpy[352].pdf</a></li>
+        <li><a href="courses/seson1/3.2 - Programmation Python/Lecture7 matplotlib.pdf" download target="_blank">📄 Lecture7 matplotlib.pdf</a></li>
+        <li><a href="courses/seson1/3.2 - Programmation Python/TP 1.pdf" download target="_blank">📄 TP 1.pdf</a></li>
+        <li><a href="courses/seson1/3.2 - Programmation Python/TP 2.pdf" download target="_blank">📄 TP 2.pdf</a></li>
+        <li><a href="courses/seson1/3.2 - Programmation Python/TP 3[351].pdf" download target="_blank">📄 TP 3[351].pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>4.1 - Gestion électronique des documents</summary>
+      <ul>
+        <li><a href="courses/seson1/4.1 - Gestion électronique des documents/Cours GED-1.pdf" download target="_blank">📄 Cours GED-1.pdf</a></li>
+        <li><a href="courses/seson1/4.1 - Gestion électronique des documents/Cours GED-2.pdf" download target="_blank">📄 Cours GED-2.pdf</a></li>
+        <li><a href="courses/seson1/4.1 - Gestion électronique des documents/Cours GED-3.pdf" download target="_blank">📄 Cours GED-3.pdf</a></li>
+        <li><a href="courses/seson1/4.1 - Gestion électronique des documents/TP 4.pdf" download target="_blank">📄 TP 4.pdf</a></li>
+        <li><a href="courses/seson1/4.1 - Gestion électronique des documents/TP1-1.pdf" download target="_blank">📄 TP1-1.pdf</a></li>
+        <li><a href="courses/seson1/4.1 - Gestion électronique des documents/TP1.pdf" download target="_blank">📄 TP1.pdf</a></li>
+        <li><a href="courses/seson1/4.1 - Gestion électronique des documents/TP2 .pdf" download target="_blank">📄 TP2 .pdf</a></li>
+        <li><a href="courses/seson1/4.1 - Gestion électronique des documents/TP3.pdf" download target="_blank">📄 TP3.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>4.2 - Documents structuré</summary>
+      <ul>
+        <li><a href="courses/seson1/4.2 - Documents structuré/Chapitre 1 _ Documents structurés ESI By J.IDRAIS.pdf" download target="_blank">📄 Chapitre 1 _ Documents structurés ESI By J.IDRAIS.pdf</a></li>
+        <li><a href="courses/seson1/4.2 - Documents structuré/Chapitre 2 _ Documents structurés ESI By J.IDRAIS.pdf" download target="_blank">📄 Chapitre 2 _ Documents structurés ESI By J.IDRAIS.pdf</a></li>
+        <li><a href="courses/seson1/4.2 - Documents structuré/Chapitre 3 _ Documents structurés ESI By J.IDRAIS.pdf" download target="_blank">📄 Chapitre 3 _ Documents structurés ESI By J.IDRAIS.pdf</a></li>
+        <li><a href="courses/seson1/4.2 - Documents structuré/Chapitre 4 _ Documents structurés ESI By J.IDRAIS.pdf" download target="_blank">📄 Chapitre 4 _ Documents structurés ESI By J.IDRAIS.pdf</a></li>
+        <li><a href="courses/seson1/4.2 - Documents structuré/TD2 Version solution_231227_223147.pdf" download target="_blank">📄 TD2 Version solution_231227_223147.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>5.1 - Initiation aux réseaux informatiques</summary>
+      <ul>
+        <li><a href="courses/seson1/5.1 - Initiation aux réseaux informatiques/1. Réseaux Informatiques_Concepts de base.pdf" download target="_blank">📄 1. Réseaux Informatiques_Concepts de base.pdf</a></li>
+        <li><a href="courses/seson1/5.1 - Initiation aux réseaux informatiques/2. Réseaux Informatiques_Modèle OSI.pdf" download target="_blank">📄 2. Réseaux Informatiques_Modèle OSI.pdf</a></li>
+        <li><a href="courses/seson1/5.1 - Initiation aux réseaux informatiques/3. Réseaux Informatiques_Modèle TCP IP.pdf" download target="_blank">📄 3. Réseaux Informatiques_Modèle TCP IP.pdf</a></li>
+        <li><a href="courses/seson1/5.1 - Initiation aux réseaux informatiques/4. Réseaux Informatiques_VLAN et VTP.pdf" download target="_blank">📄 4. Réseaux Informatiques_VLAN et VTP.pdf</a></li>
+        <li><a href="courses/seson1/5.1 - Initiation aux réseaux informatiques/5. Introduction au routage.pdf" download target="_blank">📄 5. Introduction au routage.pdf</a></li>
+        <li><a href="courses/seson1/5.1 - Initiation aux réseaux informatiques/6. Réseaux Informatiques_Introduction à la sécurité.pdf" download target="_blank">📄 6. Réseaux Informatiques_Introduction à la sécurité.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>5.2 - Réseaux sans fils et mobiles</summary>
+      <ul>
+        <li><a href="courses/seson1/5.2 - Réseaux sans fils et mobiles/Réseaux SFM S1-S5.pdf" download target="_blank">📄 Réseaux SFM S1-S5.pdf</a></li>
+        <li><a href="courses/seson1/5.2 - Réseaux sans fils et mobiles/Réseaux SFM S1.pdf" download target="_blank">📄 Réseaux SFM S1.pdf</a></li>
+        <li><a href="courses/seson1/5.2 - Réseaux sans fils et mobiles/Réseaux SFM S2.pdf" download target="_blank">📄 Réseaux SFM S2.pdf</a></li>
+        <li><a href="courses/seson1/5.2 - Réseaux sans fils et mobiles/Réseaux SFM S3.pdf" download target="_blank">📄 Réseaux SFM S3.pdf</a></li>
+        <li><a href="courses/seson1/5.2 - Réseaux sans fils et mobiles/Réseaux SFM S4.pdf" download target="_blank">📄 Réseaux SFM S4.pdf</a></li>
+        <li><a href="courses/seson1/5.2 - Réseaux sans fils et mobiles/Réseaux SFM S5.pdf" download target="_blank">📄 Réseaux SFM S5.pdf</a></li>
+        <li><a href="courses/seson1/5.2 - Réseaux sans fils et mobiles/Réseaux SFM S6.pdf" download target="_blank">📄 Réseaux SFM S6.pdf</a></li>
+        <li><a href="courses/seson1/5.2 - Réseaux sans fils et mobiles/tp1 - Sécurité Informatique.pdf" download target="_blank">📄 tp1 - Sécurité Informatique.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>6.1 - Théorie des graphes</summary>
+      <ul>
+        <li><a href="courses/seson1/6.1 - Théorie des graphes/CRSTDG2020-2021.pdf" download target="_blank">📄 CRSTDG2020-2021.pdf</a></li>
+        <li><a href="courses/seson1/6.1 - Théorie des graphes/TDG cours2023-2024.pdf" download target="_blank">📄 TDG cours2023-2024.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>6.2 - Optimisation</summary>
+      <ul>
+        <li><a href="courses/seson1/6.2 - Optimisation/Opptimisation.pdf" download target="_blank">📄 Opptimisation.pdf</a></li>
+        <li><a href="courses/seson1/6.2 - Optimisation/optimisation.pdf" download target="_blank">📄 optimisation.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>7.1 - Économie générale</summary>
+      <ul>
+        <li><a href="courses/seson1/7.1 - Économie générale/CH 2 - Section 1.pdf" download target="_blank">📄 CH 2 - Section 1.pdf</a></li>
+        <li><a href="courses/seson1/7.1 - Économie générale/CH 2 - Section 2.pdf" download target="_blank">📄 CH 2 - Section 2.pdf</a></li>
+        <li><a href="courses/seson1/7.1 - Économie générale/CH 2 - Section 3.pdf" download target="_blank">📄 CH 2 - Section 3.pdf</a></li>
+        <li><a href="courses/seson1/7.1 - Économie générale/CH 3- Section 1.pdf" download target="_blank">📄 CH 3- Section 1.pdf</a></li>
+        <li><a href="courses/seson1/7.1 - Économie générale/CH 3- Section 2.pdf" download target="_blank">📄 CH 3- Section 2.pdf</a></li>
+        <li><a href="courses/seson1/7.1 - Économie générale/CH 3- Section 3.pdf" download target="_blank">📄 CH 3- Section 3.pdf</a></li>
+        <li><a href="courses/seson1/7.1 - Économie générale/CH 4- Section 1.pdf" download target="_blank">📄 CH 4- Section 1.pdf</a></li>
+        <li><a href="courses/seson1/7.1 - Économie générale/CH1 - Sections 3 et 4.pdf" download target="_blank">📄 CH1 - Sections 3 et 4.pdf</a></li>
+        <li><a href="courses/seson1/7.1 - Économie générale/CH1- Sections 1 et 2.pdf" download target="_blank">📄 CH1- Sections 1 et 2.pdf</a></li>
+        <li><a href="courses/seson1/7.1 - Économie générale/Economie_gen.pdf" download target="_blank">📄 Economie_gen.pdf</a></li>
+        <li><a href="courses/seson1/7.1 - Économie générale/Etude de cas - Marché du thé.pdf" download target="_blank">📄 Etude de cas - Marché du thé.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>7.2 - Micro et Macro-économie</summary>
+      <ul>
+        <li><a href="courses/seson1/7.2 - Micro et Macro-économie/Chapitre 1- la théorie de l’utilité.pdf" download target="_blank">📄 Chapitre 1- la théorie de l’utilité.pdf</a></li>
+        <li><a href="courses/seson1/7.2 - Micro et Macro-économie/Chapitre 2-Les courbes d’indifférence, TMS et contrainte budgétaire.pdf" download target="_blank">📄 Chapitre 2-Les courbes d’indifférence, TMS et contrainte budgétaire.pdf</a></li>
+        <li><a href="courses/seson1/7.2 - Micro et Macro-économie/Chapitre 3 - Le choix optimal du consommateur.pdf" download target="_blank">📄 Chapitre 3 - Le choix optimal du consommateur.pdf</a></li>
+        <li><a href="courses/seson1/7.2 - Micro et Macro-économie/Chapitre 4- les agents économiques et le circuit économique 2023-2024.pdf" download target="_blank">📄 Chapitre 4- les agents économiques et le circuit économique 2023-2024.pdf</a></li>
+        <li><a href="courses/seson1/7.2 - Micro et Macro-économie/Chapitre 5- Les agrégats nationaux 2023-2024.pdf" download target="_blank">📄 Chapitre 5- Les agrégats nationaux 2023-2024.pdf</a></li>
+        <li><a href="courses/seson1/7.2 - Micro et Macro-économie/Micro_Eco.pdf" download target="_blank">📄 Micro_Eco.pdf</a></li>
+        <li><a href="courses/seson1/7.2 - Micro et Macro-économie/Série 1. Exercice 6.pdf" download target="_blank">📄 Série 1. Exercice 6.pdf</a></li>
+        <li><a href="courses/seson1/7.2 - Micro et Macro-économie/Série 2 solution_231129_183232.pdf" download target="_blank">📄 Série 2 solution_231129_183232.pdf</a></li>
+        <li><a href="courses/seson1/7.2 - Micro et Macro-économie/Série 2. Exercice 1.pdf" download target="_blank">📄 Série 2. Exercice 1.pdf</a></li>
+        <li><a href="courses/seson1/7.2 - Micro et Macro-économie/Série 2. Exercice 2 (Suite).pdf" download target="_blank">📄 Série 2. Exercice 2 (Suite).pdf</a></li>
+        <li><a href="courses/seson1/7.2 - Micro et Macro-économie/Série 2. Exercice 2.pdf" download target="_blank">📄 Série 2. Exercice 2.pdf</a></li>
+        <li><a href="courses/seson1/7.2 - Micro et Macro-économie/S俽ie 1. Exercice 6.pdf" download target="_blank">📄 S俽ie 1. Exercice 6.pdf</a></li>
+        <li><a href="courses/seson1/7.2 - Micro et Macro-économie/T.D. Micro-Macroéconomie - Série 4.pdf" download target="_blank">📄 T.D. Micro-Macroéconomie - Série 4.pdf</a></li>
+        <li><a href="courses/seson1/7.2 - Micro et Macro-économie/Travaux dirigés Mico -Macroéconomie - Série 3.pdf" download target="_blank">📄 Travaux dirigés Mico -Macroéconomie - Série 3.pdf</a></li>
+        <li><a href="courses/seson1/7.2 - Micro et Macro-économie/Travaux dirigés Micro et Macro-économie - Série 1-.pdf" download target="_blank">📄 Travaux dirigés Micro et Macro-économie - Série 1-.pdf</a></li>
+        <li><a href="courses/seson1/7.2 - Micro et Macro-économie/macro-economie.pdf" download target="_blank">📄 macro-economie.pdf</a></li>
+        <li><a href="courses/seson1/7.2 - Micro et Macro-économie/micro ec cours complet.pdf" download target="_blank">📄 micro ec cours complet.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>8.1 - Techniques d’expression et de communication (TEC)</summary>
+      <ul>
+        <li><a href="courses/seson1/8.1 - Techniques d’expression et de communication (TEC)/Communication_231215_165956.pdf" download target="_blank">📄 Communication_231215_165956.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>8.2 - English for General Purposes 1</summary>
+      <ul>
+      </ul>
+    </details>
+    
+    </section>
+    
+    <section><h2>Season 2</h2>
+    <details>
+      <summary>1.1 - Analyse et Conception des SI Relationnels</summary>
+      <ul>
+        <li><a href="courses/seson2/1.1 - Analyse et Conception des SI Relationnels/Analyse et Conception des SI Relationnels S1.pdf" download target="_blank">📄 Analyse et Conception des SI Relationnels S1.pdf</a></li>
+        <li><a href="courses/seson2/1.1 - Analyse et Conception des SI Relationnels/Analyse et Conception des SI Relationnels S2.pdf" download target="_blank">📄 Analyse et Conception des SI Relationnels S2.pdf</a></li>
+        <li><a href="courses/seson2/1.1 - Analyse et Conception des SI Relationnels/Analyse et Conception des SI Relationnels S3.pdf" download target="_blank">📄 Analyse et Conception des SI Relationnels S3.pdf</a></li>
+        <li><a href="courses/seson2/1.1 - Analyse et Conception des SI Relationnels/Analyse et Conception des SI Relationnels S4.pdf" download target="_blank">📄 Analyse et Conception des SI Relationnels S4.pdf</a></li>
+        <li><a href="courses/seson2/1.1 - Analyse et Conception des SI Relationnels/Analyse et Conception des SI Relationnels S5.pdf" download target="_blank">📄 Analyse et Conception des SI Relationnels S5.pdf</a></li>
+        <li><a href="courses/seson2/1.1 - Analyse et Conception des SI Relationnels/Analyse et Conception des SI Relationnels S6.pdf" download target="_blank">📄 Analyse et Conception des SI Relationnels S6.pdf</a></li>
+        <li><a href="courses/seson2/1.1 - Analyse et Conception des SI Relationnels/Analyse et Conception des SI Relationnels S7.pdf" download target="_blank">📄 Analyse et Conception des SI Relationnels S7.pdf</a></li>
+        <li><a href="courses/seson2/1.1 - Analyse et Conception des SI Relationnels/Analyse et Conception des SI Relationnels S8.pdf" download target="_blank">📄 Analyse et Conception des SI Relationnels S8.pdf</a></li>
+        <li><a href="courses/seson2/1.1 - Analyse et Conception des SI Relationnels/Analyse et Conception des SI Relationnels S9.pdf" download target="_blank">📄 Analyse et Conception des SI Relationnels S9.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>1.2 - SGBDR – SQL</summary>
+      <ul>
+        <li><a href="courses/seson2/1.2 - SGBDR – SQL/Bases de données.pdf" download target="_blank">📄 Bases de données.pdf</a></li>
+        <li><a href="courses/seson2/1.2 - SGBDR – SQL/Plan_SGBD_SQL.pdf" download target="_blank">📄 Plan_SGBD_SQL.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>2.1 - Probabilité</summary>
+      <ul>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>2.2 - Statistique descriptive</summary>
+      <ul>
+        <li><a href="courses/seson2/2.2 - Statistique descriptive/statistic.descript..pdf" download target="_blank">📄 statistic.descript..pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>3.1 - Technologies Web</summary>
+      <ul>
+        <li><a href="courses/seson2/3.1 - Technologies Web/CoursCSS_Sbihi.pdf" download target="_blank">📄 CoursCSS_Sbihi.pdf</a></li>
+        <li><a href="courses/seson2/3.1 - Technologies Web/HTML.pdf" download target="_blank">📄 HTML.pdf</a></li>
+        <li><a href="courses/seson2/3.1 - Technologies Web/Technologie_web.pdf" download target="_blank">📄 Technologie_web.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>3.2 - Programmation web en PHP</summary>
+      <ul>
+        <li><a href="courses/seson2/3.2 - Programmation web en PHP/Cours php -partie 1 (2022-2023).pdf" download target="_blank">📄 Cours php -partie 1 (2022-2023).pdf</a></li>
+        <li><a href="courses/seson2/3.2 - Programmation web en PHP/Cours php -partie 2.pdf" download target="_blank">📄 Cours php -partie 2.pdf</a></li>
+        <li><a href="courses/seson2/3.2 - Programmation web en PHP/Partie 3 du cours de PHP - POO.pdf" download target="_blank">📄 Partie 3 du cours de PHP - POO.pdf</a></li>
+        <li><a href="courses/seson2/3.2 - Programmation web en PHP/Partie 4 du cours de PHP - BD (1).pdf" download target="_blank">📄 Partie 4 du cours de PHP - BD (1).pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>4.1 - Algorithmique avancée</summary>
+      <ul>
+        <li><a href="courses/seson2/4.1 - Algorithmique avancée/1- Introduction.pdf" download target="_blank">📄 1- Introduction.pdf</a></li>
+        <li><a href="courses/seson2/4.1 - Algorithmique avancée/2- Algorithmes de tri.pdf" download target="_blank">📄 2- Algorithmes de tri.pdf</a></li>
+        <li><a href="courses/seson2/4.1 - Algorithmique avancée/3- Structures de Données Linéaires.pdf" download target="_blank">📄 3- Structures de Données Linéaires.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>4.2 - Programmation avancée</summary>
+      <ul>
+        <li><a href="courses/seson2/4.2 - Programmation avancée/Descriptif_Projet_EDA.pdf" download target="_blank">📄 Descriptif_Projet_EDA.pdf</a></li>
+        <li><a href="courses/seson2/4.2 - Programmation avancée/compte-rendu.pdf" download target="_blank">📄 compte-rendu.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>5.1 - ECM</summary>
+      <ul>
+        <li><a href="courses/seson2/5.1 - ECM/Cours ECM_chapitre 1 SI  de lentreprise.pdf" download target="_blank">📄 Cours ECM_chapitre 1 SI  de lentreprise.pdf</a></li>
+        <li><a href="courses/seson2/5.1 - ECM/Cours ECM_chapitre 2.pdf" download target="_blank">📄 Cours ECM_chapitre 2.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>5.2 - E-services</summary>
+      <ul>
+        <li><a href="courses/seson2/5.2 - E-services/Cadrage du projet E-Service à rendre et à présenter.pdf" download target="_blank">📄 Cadrage du projet E-Service à rendre et à présenter.pdf</a></li>
+        <li><a href="courses/seson2/5.2 - E-services/Cours  E-services_Chap3 _E-services tour dhorizon.pdf" download target="_blank">📄 Cours  E-services_Chap3 _E-services tour dhorizon.pdf</a></li>
+        <li><a href="courses/seson2/5.2 - E-services/Cours E-services_Chapt 1_ la transformation digitale.pdf" download target="_blank">📄 Cours E-services_Chapt 1_ la transformation digitale.pdf</a></li>
+        <li><a href="courses/seson2/5.2 - E-services/Cours E-services_Chapt 2_ vue globale sur les E-services.pdf" download target="_blank">📄 Cours E-services_Chapt 2_ vue globale sur les E-services.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>6.1 - Knowledge Management (KM)</summary>
+      <ul>
+        <li><a href="courses/seson2/6.1 - Knowledge Management (KM)/Cours KM 1ACI.pdf" download target="_blank">📄 Cours KM 1ACI.pdf</a></li>
+        <li><a href="courses/seson2/6.1 - Knowledge Management (KM)/Examen final à distance KM 2020.pdf" download target="_blank">📄 Examen final à distance KM 2020.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>6.2 - Veille technologique</summary>
+      <ul>
+        <li><a href="courses/seson2/6.2 - Veille technologique/1A_plan_cours_veille_technologique 2023.pdf" download target="_blank">📄 1A_plan_cours_veille_technologique 2023.pdf</a></li>
+        <li><a href="courses/seson2/6.2 - Veille technologique/VT_Corrigé_examen_juin2023.pdf" download target="_blank">📄 VT_Corrigé_examen_juin2023.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>7.1 - Management et Marketing</summary>
+      <ul>
+        <li><a href="courses/seson2/7.1 - Management et Marketing/Management2023.pdf" download target="_blank">📄 Management2023.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>7.2 - Comptabilité générale</summary>
+      <ul>
+        <li><a href="courses/seson2/7.2 - Comptabilité générale/1-Comptabilité générale- Chapitre introductif.pdf" download target="_blank">📄 1-Comptabilité générale- Chapitre introductif.pdf</a></li>
+        <li><a href="courses/seson2/7.2 - Comptabilité générale/2-CH 2 - Section 1- le mécanisme emplois-ressources.pdf" download target="_blank">📄 2-CH 2 - Section 1- le mécanisme emplois-ressources.pdf</a></li>
+        <li><a href="courses/seson2/7.2 - Comptabilité générale/2-CH 2 - Section 2- le Bilan.pdf" download target="_blank">📄 2-CH 2 - Section 2- le Bilan.pdf</a></li>
+        <li><a href="courses/seson2/7.2 - Comptabilité générale/3-Comptabilité générale  Chapitre 3 - Le CPC.pdf" download target="_blank">📄 3-Comptabilité générale  Chapitre 3 - Le CPC.pdf</a></li>
+        <li><a href="courses/seson2/7.2 - Comptabilité générale/4-CamScanner 03-21-2023 16.35.pdf" download target="_blank">📄 4-CamScanner 03-21-2023 16.35.pdf</a></li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>8.1 - Techniques d’expression et de communication 2</summary>
+      <ul>
+      </ul>
+    </details>
+    
+    <details>
+      <summary>8.2 - English for General Purposes 2</summary>
+      <ul>
+        <li><a href="courses/seson2/8.2 - English for General Purposes 2/unit 10 Language Leader Up-Int CB.pdf" download target="_blank">📄 unit 10 Language Leader Up-Int CB.pdf</a></li>
+      </ul>
+    </details>
+    
+    </section>
+  <footer>
+    <p>&copy; 2023 ESI Wiki. All rights reserved.</p>
+    <p>Contact us: <a href="mailto:taha.hajji@esi.ac.ma">taha.hajji@esi.ac.ma</a> | Phone: 0711274959</p>
+  </footer>
+</body>
+</html>

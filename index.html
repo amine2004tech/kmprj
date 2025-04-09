@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESI Wiki - Home</title>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ESI Wiki - Home with Chatbot</title>
+        <style>
+            /* General Styling */
+            body {
+                font-family: 'Poppins', sans-serif;
+                margin: 0;
+                padding: 0;
+                background: #0d1b2a;
+                color: #e0e1dd;
+                text-align: center;
+            }
+    
+            header {
+                background: #1b263b;
+                padding: 20px;
+                color: #fff;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            }
+    
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+    
+            nav ul li {
+                display: inline;
+                margin: 0 15px;
+            }
+    
+            nav ul li a {
+                color: #f4a261;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s ease-in-out;
+            }
+    
+            nav ul li a:hover {
+                color: #e76f51;
+            }
+    
+            /* Content Styling */
+            .content-container {
+                max-width: 900px;
+                margin: auto;
+                text-align: left;
+                background: rgba(255, 255, 255, 0.08);
+                padding: 30px;
+                border-radius: 10px;
+                margin-top: 20px;
+            }
+    
+            h1, h2 {
+                color: #f4a261;
+            }
+    
+            ul {
+                padding-left: 20px;
+            }
+    
+            /* Major Selection Styling */
+            .major-container {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                flex-wrap: wrap;
+                margin-top: 20px;
+            }
+    
+            .major-button {
+                width: 220px;
+                padding: 15px;
+                font-size: 18px;
+                font-weight: bold;
+                cursor: pointer;
+                border: 2px solid #f4a261;
+                border-radius: 8px;
+                background: #1b263b;
+                color: #f4a261;
+                transition: all 0.3s ease-in-out;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            }
+    
+            .major-button:hover {
+                background: #f4a261;
+                color: #1b263b;
+                transform: scale(1.05);
+                box-shadow: 0px 4px 15px rgba(244, 162, 97, 0.5);
+            }
+    
+            /* Major Info Styling */
+            .major-info {
+                display: none;
+                margin: 20px auto;
+                padding: 20px;
+                width: 80%;
+                background-color: rgba(255, 255, 255, 0.15);
+                border-radius: 10px;
+                text-align: left;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+                animation: fadeIn 0.5s ease-in-out;
+            }
+    
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+    
+            footer {
+                margin-top: 40px;
+                padding: 20px;
+                background: #1b263b;
+                color: #f4a261;
+            }
+    
+            /* Chatbot Styling */
+            .chat-button {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: #007bff;
+                color: white;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                border: none;
+                cursor: pointer;
+                font-size: 24px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            .chatbox {
+                position: fixed;
+                bottom: 80px;
+                right: 20px;
+                width: 380px;
+                height: 500px;
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                display: none;
+                flex-direction: column;
+                overflow: hidden;
+            }
+    
+            .chat-header {
+                background: #007bff;
+                color: white;
+                padding: 15px;
+                text-align: center;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+    
+            .bot-icon {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                background: white;
+                margin-right: 10px;
+            }
+    
+            .close-btn {
+                background: none;
+                border: none;
+                color: white;
+                font-size: 22px;
+                cursor: pointer;
+            }
+    
+            .chat-messages {
+                flex-grow: 1;
+                overflow-y: auto;
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                background: #f9f9f9;
+            }
+    
+            .chat-input {
+                display: flex;
+                border-top: 1px solid #ddd;
+                padding: 10px;
+                background: #ffffff;
+            }
+    
+            .chat-input input {
+                flex-grow: 1;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 20px;
+                outline: none;
+                font-size: 14px;
+            }
+    
+            .send-button {
+                width: 40px;
+                height: 40px;
+                background: #007bff;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 10px;
+            }
+    
+            .send-button img {
+                width: 22px;
+                height: 22px;
+            }
+    
+            .bubble {
+                padding: 12px 16px;
+                border-radius: 20px;
+                margin: 5px 0;
+                max-width: 75%;
+                font-size: 14px;
+                word-wrap: break-word;
+            }
+    
+            .user-bubble {
+                background: #007bff;
+                color: white;
+                border-radius: 15px 15px 0px 15px;
+                align-self: flex-end;
+            }
+    
+            .bot-bubble {
+                background: #e0e0e0;
+                color: black;
+                border-radius: 15px 15px 15px 0px;
+                align}
+        </style>    
+</head>
+<body>
+    <header>
+        <h1>Welcome to WIKI ESI</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="academy.html">Academy (Explicite)</a></li>
+                <li><a href="qa.html">Q&A (Tacite)</a></li>
+                <li><a href="chat/templates/index.html">Chatbot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-container">
+        <section id="home">
+            <h2>About ESI</h2>
+            <p>
+                The <strong>École Supérieure d’Informatique (ESI)</strong> is a top-tier institution specializing in 
+                <strong>computer science, cybersecurity, artificial intelligence, and data science</strong>. 
+            </p>
+            <h3>Why Choose ESI?</h3>
+            <ul>
+                <li><strong>Innovative Curriculum:</strong> Cutting-edge courses in AI, cybersecurity, and software development.</li>
+                <li><strong>Industry Partnerships:</strong> Collaborations with Google, Microsoft, and IBM.</li>
+                <li><strong>State-of-the-Art Labs:</strong> Advanced facilities for hands-on learning.</li>
+                <li><strong>Global Recognition:</strong> ESI graduates work in top tech companies worldwide.</li>
+            </ul>
+        </section>
+
+        <h1>Majors at ESI Rabat</h1>
+        <div class="major-container">
+            <button class="major-button" onclick="showInfo('issic')">ISSIC</button>
+            <button class="major-button" onclick="showInfo('isitd')">ISITD</button>
+            <button class="major-button" onclick="showInfo('inn')">INN</button>
+            <button class="major-button" onclick="showInfo('icsd')">ICSD</button>
+        </div>
+
+        <div id="issic" class="major-info">
+            <h2>ISSIC - Information & Communication</h2>
+            <p>Specialized in digital media, journalism, and corporate communication strategies.</p>
+        </div>
+
+        <div id="isitd" class="major-info">
+            <h2>ISITD - Documentation & Archives</h2>
+            <p>Expertise in digital libraries, document management, and archiving systems.</p>
+        </div>
+
+        <div id="inn" class="major-info">
+            <h2>INN - Digital Transformation & Cybersecurity</h2>
+            <p>Focus on cloud computing, IT security, and modern software development.</p>
+        </div>
+
+        <div id="icsd" class="major-info">
+            <h2>ICSD - Cybersecurity & Data Science</h2>
+            <p>Advanced topics in AI, blockchain, and ethical hacking.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 ESI Wiki. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:taha.hajji@esi.ac.ma">taha.hajji@esi.ac.ma</a> | Phone: 0711274959</p>
+    </footer>
+
+    <script>
+        function showInfo(id) {
+            document.querySelectorAll('.major-info').forEach(div => div.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - ESI Wiki</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0d1b2a;
+            color: #e0e1dd;
+            text-align: center;
+        }
+
+        header {
+            background: #1b263b;
+            padding: 20px;
+            color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #f4a261;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #e76f51;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            background-color: #1b263b;
+            color: #f4a261;
+            border: 2px solid #f4a261;
+            border-radius: 8px;
+            outline: none;
+            transition: box-shadow 0.3s ease;
+        }
+
+        input[type="text"]::placeholder {
+            color: #e0e1dd;
+            opacity: 0.6;
+        }
+
+        input[type="text"]:focus {
+            box-shadow: 0 0 10px #f4a261, 0 0 20px #f4a261;
+        }
+
+        h1, h2 {
+            color: #f4a261;
+        }
+
+        .faq-section {
+            margin-top: 30px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #f4a261;
+        }
+
+        .faq-answer {
+            margin-top: 5px;
+            color: #e0e1dd;
+        }
+        .faq-answer {
+    display: block;               /* Par défaut, on affiche tout */
+    overflow: hidden;             /* Cache le contenu débordant */
+    max-height: 0;                /* Commence avec une hauteur de 0 (caché) */
+    transition: max-height 0.5s ease-out, opacity 0.3s ease-out; /* Animation fluide */
+    opacity: 0;                   /* Commence avec une opacité de 0 */
+}
+
+.faq-answer.open {
+    max-height: 1000px;           /* Valeur élevée pour permettre l'extension de la réponse */
+    opacity: 1;                   /* Devient visible */
+}
+
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: #1b263b;
+            color: #f4a261;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WIKI ESI</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="academy.html">Academy (Explicite)</a></li>
+                <li><a href="qa.html">Q&A (Tacite)</a></li>
+                <li><a href="chat/templates/index.html">Chatbot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <input type="text" id="faqSearch" placeholder="Rechercher une question..." onkeyup="searchFAQ()">
+
+        <div class="faq-section">
+            <h2>Général & Administratif</h2>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Quelle est la mission principale de l’ESI ?</div>
+                <div class="faq-answer">Former des ingénieurs en sciences de l’information, assurer la recherche, et contribuer au développement de la société de l’information au Maroc.</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Quels diplômes sont délivrés par l’ESI ?</div>
+                <div class="faq-answer">Ingénieur d’État, Master, Master Spécialisé, et Doctorat.</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Quels sont les partenaires internationaux de l’ESI ?</div>
+                <div class="faq-answer">Ajman University, CNAM (France), Université de Montréal, Oracle Academy, Huawei ICT Academy.</div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Cycle Ingénieur</h2>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Comment valider un module en Cycle Ingénieur ?</div>
+                <div class="faq-answer">Note ≥ 12/20, avec aucun élément de module &lt; 5/20. Compensation possible si moyenne ≥ 6/20.</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Quels sont les stages obligatoires en Cycle Ingénieur ?</div>
+                <div class="faq-answer">Stage Ouvrier (SO), Stage d’Études (SE), et Stage de Fin d’Études (SFE) avec PFE.</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Comment est calculée la Moyenne Générale des Études (MGE) ?</div>
+                <div class="faq-answer">MGE = (MA1 + MA2 + MS5 + MS6) / 4.</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Quelles mentions existent pour le diplôme d’Ingénieur ?</div>
+                <div class="faq-answer">Très Bien (≥ 18/20), Bien (≥ 16/20), Assez Bien (≥ 14/20), Passable (≥ 12/20).</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Qu’est-ce qu’une « année de réserve » ?</div>
+                <div class="faq-answer">Redoublement partiel si moyenne ≥ 6/20, pour repasser uniquement les modules non validés.</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Quels sont les débouchés de la filière ICSD ?</div>
+                <div class="faq-answer">Data Scientist, Ingénieur Big Data, Consultant en Business Intelligence.</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Quelles compétences vise la filière Cyberdéfense (ISSIC) ?</div>
+                <div class="faq-answer">Sécurité des SI, cryptographie, gestion des risques, audit de sécurité.</div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Examens & Évaluations</h2>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Comment sont organisées les sessions d’examens finaux ?</div>
+                <div class="faq-answer">Sur 8 jours en fin de semestre, avec 2 éléments de modules différents évalués par jour.</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Que se passe-t-il en cas d’absence à un examen ?</div>
+                <div class="faq-answer">Note zéro, mais droit au rattrapage si justifiée (sauf pour les soutenances).</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Quelles sanctions pour fraude aux examens ?</div>
+                <div class="faq-answer">Exclusion, note zéro, blâme, redoublement, ou exclusion définitive selon la gravité.</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Comment consulter ses copies après correction ?</div>
+                <div class="faq-answer">Les étudiants ont 48h pour contester une note après consultation.</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Quel est le délai de communication des notes ?</div>
+                <div class="faq-answer">15 jours maximum après l’évaluation.</div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Stages & PFE</h2>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Que risque un étudiant en retard pour déposer son rapport de stage ?</div>
+                <div class="faq-answer">Pénalités de 2 à 6 points selon le retard, plafonnement à 12/20, ou refus après 15 jours.</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Comment est évalué le Projet de Fin d’Études (PFE) ?</div>
+                <div class="faq-answer">Par un jury (note intégrant mémoire, soutenance, et évaluation du tuteur).</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Peut-on changer d’organisme d’accueil pour un stage ?</div>
+                <div class="faq-answer">Oui, une seule fois, avec décharge de l’organisme initial et nouvelle convention.</div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Règles Disciplinaires</h2>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Que se passe-t-il si un étudiant dépasse 30% d’absences ?</div>
+                <div class="faq-answer">Note zéro pour l’élément et non-validation du module.</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Comment sont gérés les plagiats ?</div>
+                <div class="faq-answer">Sanctions similaires à la fraude (note zéro, non-validation, exclusion possible).</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <div class="faq-question">Quels outils sont utilisés pour l’enseignement à distance ?</div>
+                <div class="faq-answer">Plateformes de l’ESI, avec ≤ 20% du volume horaire d’un module à distance.</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 ESI Wiki. Tous droits réservés.</p>
+        <p>Contact : <a href="mailto:taha.hajji@esi.ac.ma">taha.hajji@esi.ac.ma</a> | Téléphone : 0711274959</p>
+    </footer>
+
+    <script>
+function toggleAnswer(clickedItem) {
+    // Fermer toutes les autres réponses
+    const allAnswers = document.querySelectorAll('.faq-answer');
+    const allItems = document.querySelectorAll('.faq-item');
+
+    allItems.forEach(item => {
+        const answer = item.querySelector('.faq-answer');
+        if (item !== clickedItem) {
+            // Ferme toutes les autres réponses en retirant la classe 'open'
+            answer.classList.remove('open');
+        }
+    });
+
+    // Afficher/cacher la réponse cliquée
+    const answer = clickedItem.querySelector('.faq-answer');
+    answer.classList.toggle('open');  // Ajoute ou retire la classe 'open'
+}
+        
+
+        function searchFAQ() {
+            const input = document.getElementById('faqSearch');
+            const filter = input.value.toLowerCase();
+            const items = document.querySelectorAll('.faq-item');
+
+            items.forEach(item => {
+                const question = item.querySelector('.faq-question').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                if (question.includes(filter) || answer.includes(filter)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

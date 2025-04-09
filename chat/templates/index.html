@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chatbot</title>
+  <style>
+    /* Global Styling */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0d1b2a;
+      color: #e0e1dd;
+      text-align: center;
+    }
+
+    header {
+      background: #1b263b;
+      padding: 20px;
+      color: #fff;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #f4a261;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav ul li a:hover {
+      color: #e76f51;
+    }
+
+    /* Chatbox Styling */
+    .chatbox {
+      max-width: 900px;
+      height: 600px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid #f4a261;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .chat-header {
+      background: #1b263b;
+      color: #f4a261;
+      padding: 15px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .chat-messages {
+      flex-grow: 1;
+      overflow-y: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chat-input {
+      display: flex;
+      padding: 15px;
+      background: #1b263b;
+      border-top: 1px solid #f4a261;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 10px 15px;
+      font-size: 15px;
+      border-radius: 20px;
+      border: 2px solid #f4a261;
+      outline: none;
+      background: #0d1b2a;
+      color: #f4a261;
+    }
+
+    .send-button {
+      margin-left: 10px;
+      background: #f4a261;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 20px;
+      color: #1b263b;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .send-button:hover {
+      background: #e76f51;
+    }
+
+    .bubble {
+      max-width: 70%;
+      padding: 12px 16px;
+      margin: 6px 0;
+      border-radius: 16px;
+      font-size: 14px;
+      word-wrap: break-word;
+    }
+
+    .user-bubble {
+      background: #f4a261;
+      color: #1b263b;
+      align-self: flex-end;
+      border-radius: 18px 18px 4px 18px;
+    }
+
+    .bot-bubble {
+      background: #1b263b;
+      color: #f4a261;
+      align-self: flex-start;
+      border-radius: 18px 18px 18px 4px;
+    }
+
+    .topic-bubble {
+      background: rgba(244, 162, 97, 0.1);
+      color: #f4a261;
+      border: 1px solid #f4a261;
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      margin-top: 4px;
+      align-self: flex-start;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .topic-bubble:hover {
+      background: rgba(244, 162, 97, 0.3);
+    }
+
+    footer {
+      background: #1b263b;
+      color: #f4a261;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .chatbox {
+        width: 90%;
+        height: 500px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to Chatbot Page</h1>
+  <nav>
+    <ul>
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../academy.html">Academy</a></li>
+      <li><a href="../../qa.html">Q&A</a></li>
+      <li><a href="chat.html">Chatbot</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Chatbox -->
+<div class="chatbox">
+  <div class="chat-header">🤖 Chat with ESI Bot</div>
+  <div class="chat-messages" id="chat-messages"></div>
+  <div class="chat-input">
+    <input type="text" id="user-input" placeholder="Ask something..." onkeypress="handleKeyPress(event)">
+    <button class="send-button" onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2023 Chatbot. All rights reserved.</p>
+  <p>Contact us: <a href="mailto:taha.hajji@esi.ac.ma">taha.hajji@esi.ac.ma</a></p>
+</footer>
+
+<script>
+  function handleKeyPress(event) {
+    if (event.key === "Enter") {
+      sendMessage();
+    }
+  }
+
+  function sendMessage(text = null) {
+    let inputField = document.getElementById("user-input");
+    let message = text || inputField.value.trim();
+    let chat = document.getElementById("chat-messages");
+
+    if (!message) return;
+
+    // Add user message
+    chat.innerHTML += `<div class="bubble user-bubble">${message}</div>`;
+    inputField.value = "";
+    chat.scrollTop = chat.scrollHeight;
+
+    // Simulate server call
+    fetch("/ask", {
+      method: "POST",
+      body: JSON.stringify({ message }),
+      headers: { "Content-Type": "application/json" }
+    })
+    .then(res => res.json())
+    .then(data => {
+      chat.innerHTML += `<div class="bubble bot-bubble">${data.response}</div>`;
+      if (data.topics) {
+        data.topics.forEach(topic => {
+          chat.innerHTML += `<div class="topic-bubble" onclick="sendMessage('${topic}')">${topic}</div>`;
+        });
+      }
+      chat.scrollTop = chat.scrollHeight;
+    });
+  }
+</script>
+
+</body>
+</html>
